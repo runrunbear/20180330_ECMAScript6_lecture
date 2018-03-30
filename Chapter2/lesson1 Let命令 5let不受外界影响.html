@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>let用途</title>
+<title>let不受外界影响</title>
 <script src="../../../vendor/traceur.js"></script>
 <script src="../../../vendor/bootstrap.js"></script>
 <script type="text/traceur">
 	var a = 100;
-	let b = 200;
-	console.log(a);	//100
-	console.log(b);	//200
+	{
+		console.log(a);	//undefined
+		let a = 100;
+		console.log(a);	//100
+	}
 </script>
 </head>
 <body>
