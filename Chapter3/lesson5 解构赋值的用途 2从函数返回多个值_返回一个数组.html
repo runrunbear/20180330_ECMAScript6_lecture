@@ -2,21 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>数组解构</title>
+<title>从函数返回多个值_返回一个数组</title>
 <script src="../../../vendor/traceur.js"></script>
 <script src="../../../vendor/bootstrap.js"></script>
 <script type="text/traceur">
-	// ES5
-	// var a = 1;
-	// var b = 2;
-	// var c = 3;
+	function fun () {
+		return [1, 2, 3];
+	};
 
-	// ES6
-	var [a, b, c] = [1, 2, 3];
-
-	console.log(a);	//1
-	console.log(b);	//2
-	console.log(c);	//3
+	var [x, y, z] = fun();
+	console.log(x);	//1
+	console.log(y);	//2
+	console.log(z);	//3
 </script>
 </head>
 <body>
